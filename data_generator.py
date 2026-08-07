@@ -55,6 +55,8 @@ def generate_geopulse_data(output_dir="data", num_devices=5000, num_pings=50000)
     ]
 
     # Export Stores GeoJSON Polygons
+    print("Exporting Store GeoJSON Polygons...")
+
     geojson_features = []
     for store in stores:
         # Approximate 500m radius polygon (roughly 0.0045 degrees lat/lon)
