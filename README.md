@@ -67,4 +67,16 @@ Git
 GitHub
 VS Code
 
+## Data Dictionary
+
+### Raw Mobile GPS Pings
+
+| Field | Description |
+|-------|-------------|
+| DeviceID | Anonymous mobile device identifier |
+| Latitude | GPS latitude |
+| Longitude | GPS longitude |
+| Timestamp | Time of GPS ping |
+| Accuracy | GPS accuracy in meters |
+
 ```
