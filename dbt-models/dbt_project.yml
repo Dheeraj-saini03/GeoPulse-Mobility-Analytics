@@ -1,0 +1,15 @@
+name: geopulse
+version: "1.0.0"
+config-version: 2
+
+profile: geopulse_profile
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+models:
+  geopulse:
+    +materialized: table
