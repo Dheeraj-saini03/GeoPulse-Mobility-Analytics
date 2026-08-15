@@ -59,6 +59,7 @@ def run_spatial_join(data_dir="data", output_dir="output"):
                 })
 
     matched_df = pd.DataFrame(matched_records)
+    print("Calculated spatial intersections...")
     matched_df.to_csv(os.path.join(output_dir, "spatial_intersections.csv"), index=False)
 
     # Hourly Footfall Aggregation
