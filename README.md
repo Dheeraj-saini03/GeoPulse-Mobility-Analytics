@@ -79,4 +79,10 @@ VS Code
 | Timestamp | Time of GPS ping |
 | Accuracy | GPS accuracy in meters |
 
+## Spatial Join Methodology
+
+Each retail store is surrounded by a 500-meter
+buffer polygon. GPS pings inside this polygon
+are counted as visitors to that store.
+
 ```
