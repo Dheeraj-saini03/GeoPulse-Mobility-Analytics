@@ -1,0 +1,6 @@
+store_id,name,lat,lon,radius_m
+STORE_001,Coffee Craft - 5th Street (Store A),37.779,-122.418,500
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),37.7815,-122.411,500
+STORE_003,Coffee Craft - Financial District,37.791,-122.401,500
+STORE_004,Coffee Craft - Mission Hub,37.76,-122.419,500
+STORE_005,Coffee Craft - SOMA Square,37.782,-122.397,500

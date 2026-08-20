@@ -1,0 +1,91 @@
+store_id,store_name,hour,total_pings,unique_visitors
+STORE_001,Coffee Craft - 5th Street (Store A),6,218,215
+STORE_001,Coffee Craft - 5th Street (Store A),7,416,396
+STORE_001,Coffee Craft - 5th Street (Store A),8,1591,1360
+STORE_001,Coffee Craft - 5th Street (Store A),9,2499,1992
+STORE_001,Coffee Craft - 5th Street (Store A),10,2043,1686
+STORE_001,Coffee Craft - 5th Street (Store A),11,1075,981
+STORE_001,Coffee Craft - 5th Street (Store A),12,802,742
+STORE_001,Coffee Craft - 5th Street (Store A),13,787,726
+STORE_001,Coffee Craft - 5th Street (Store A),14,1027,920
+STORE_001,Coffee Craft - 5th Street (Store A),15,1258,1100
+STORE_001,Coffee Craft - 5th Street (Store A),16,1659,1393
+STORE_001,Coffee Craft - 5th Street (Store A),17,2265,1839
+STORE_001,Coffee Craft - 5th Street (Store A),18,1797,1489
+STORE_001,Coffee Craft - 5th Street (Store A),19,830,780
+STORE_001,Coffee Craft - 5th Street (Store A),20,632,600
+STORE_001,Coffee Craft - 5th Street (Store A),21,464,446
+STORE_001,Coffee Craft - 5th Street (Store A),22,206,201
+STORE_001,Coffee Craft - 5th Street (Store A),23,214,207
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),6,185,181
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),7,363,356
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),8,1400,1235
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),9,2182,1814
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),10,1825,1526
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),11,868,797
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),12,713,663
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),13,721,663
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),14,947,850
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),15,1095,990
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),16,1472,1281
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),17,1984,1667
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),18,1659,1413
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),19,738,682
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),20,583,562
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),21,396,385
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),22,154,150
+STORE_002,Coffee Craft - Market Street (Store B - Candidate),23,181,180
+STORE_003,Coffee Craft - Financial District,6,3,3
+STORE_003,Coffee Craft - Financial District,7,6,6
+STORE_003,Coffee Craft - Financial District,8,36,36
+STORE_003,Coffee Craft - Financial District,9,45,45
+STORE_003,Coffee Craft - Financial District,10,32,32
+STORE_003,Coffee Craft - Financial District,11,23,23
+STORE_003,Coffee Craft - Financial District,12,7,7
+STORE_003,Coffee Craft - Financial District,13,24,24
+STORE_003,Coffee Craft - Financial District,14,24,24
+STORE_003,Coffee Craft - Financial District,15,18,18
+STORE_003,Coffee Craft - Financial District,16,30,30
+STORE_003,Coffee Craft - Financial District,17,42,42
+STORE_003,Coffee Craft - Financial District,18,40,40
+STORE_003,Coffee Craft - Financial District,19,22,22
+STORE_003,Coffee Craft - Financial District,20,10,10
+STORE_003,Coffee Craft - Financial District,21,14,14
+STORE_003,Coffee Craft - Financial District,22,4,4
+STORE_003,Coffee Craft - Financial District,23,5,5
+STORE_004,Coffee Craft - Mission Hub,6,4,4
+STORE_004,Coffee Craft - Mission Hub,7,10,10
+STORE_004,Coffee Craft - Mission Hub,8,26,26
+STORE_004,Coffee Craft - Mission Hub,9,64,63
+STORE_004,Coffee Craft - Mission Hub,10,46,46
+STORE_004,Coffee Craft - Mission Hub,11,19,19
+STORE_004,Coffee Craft - Mission Hub,12,15,15
+STORE_004,Coffee Craft - Mission Hub,13,14,14
+STORE_004,Coffee Craft - Mission Hub,14,24,24
+STORE_004,Coffee Craft - Mission Hub,15,17,17
+STORE_004,Coffee Craft - Mission Hub,16,21,21
+STORE_004,Coffee Craft - Mission Hub,17,38,38
+STORE_004,Coffee Craft - Mission Hub,18,20,20
+STORE_004,Coffee Craft - Mission Hub,19,25,25
+STORE_004,Coffee Craft - Mission Hub,20,14,14
+STORE_004,Coffee Craft - Mission Hub,21,7,7
+STORE_004,Coffee Craft - Mission Hub,22,6,6
+STORE_004,Coffee Craft - Mission Hub,23,3,3
+STORE_005,Coffee Craft - SOMA Square,6,3,3
+STORE_005,Coffee Craft - SOMA Square,7,12,12
+STORE_005,Coffee Craft - SOMA Square,8,38,38
+STORE_005,Coffee Craft - SOMA Square,9,49,48
+STORE_005,Coffee Craft - SOMA Square,10,36,35
+STORE_005,Coffee Craft - SOMA Square,11,23,23
+STORE_005,Coffee Craft - SOMA Square,12,20,20
+STORE_005,Coffee Craft - SOMA Square,13,22,22
+STORE_005,Coffee Craft - SOMA Square,14,21,21
+STORE_005,Coffee Craft - SOMA Square,15,25,25
+STORE_005,Coffee Craft - SOMA Square,16,31,31
+STORE_005,Coffee Craft - SOMA Square,17,48,48
+STORE_005,Coffee Craft - SOMA Square,18,37,37
+STORE_005,Coffee Craft - SOMA Square,19,20,20
+STORE_005,Coffee Craft - SOMA Square,20,16,16
+STORE_005,Coffee Craft - SOMA Square,21,11,11
+STORE_005,Coffee Craft - SOMA Square,22,3,3
+STORE_005,Coffee Craft - SOMA Square,23,8,8

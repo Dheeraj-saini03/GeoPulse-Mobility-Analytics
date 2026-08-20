@@ -1,0 +1,180 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_001",
+        "name": "Coffee Craft - 5th Street (Store A)",
+        "radius_m": 500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4225,
+              37.7745
+            ],
+            [
+              -122.41350000000001,
+              37.7745
+            ],
+            [
+              -122.41350000000001,
+              37.783500000000004
+            ],
+            [
+              -122.4225,
+              37.783500000000004
+            ],
+            [
+              -122.4225,
+              37.7745
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_002",
+        "name": "Coffee Craft - Market Street (Store B - Candidate)",
+        "radius_m": 500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4155,
+              37.777
+            ],
+            [
+              -122.40650000000001,
+              37.777
+            ],
+            [
+              -122.40650000000001,
+              37.786
+            ],
+            [
+              -122.4155,
+              37.786
+            ],
+            [
+              -122.4155,
+              37.777
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_003",
+        "name": "Coffee Craft - Financial District",
+        "radius_m": 500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.40549999999999,
+              37.7865
+            ],
+            [
+              -122.3965,
+              37.7865
+            ],
+            [
+              -122.3965,
+              37.7955
+            ],
+            [
+              -122.40549999999999,
+              37.7955
+            ],
+            [
+              -122.40549999999999,
+              37.7865
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_004",
+        "name": "Coffee Craft - Mission Hub",
+        "radius_m": 500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.42349999999999,
+              37.7555
+            ],
+            [
+              -122.4145,
+              37.7555
+            ],
+            [
+              -122.4145,
+              37.7645
+            ],
+            [
+              -122.42349999999999,
+              37.7645
+            ],
+            [
+              -122.42349999999999,
+              37.7555
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "store_id": "STORE_005",
+        "name": "Coffee Craft - SOMA Square",
+        "radius_m": 500
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4015,
+              37.777499999999996
+            ],
+            [
+              -122.39250000000001,
+              37.777499999999996
+            ],
+            [
+              -122.39250000000001,
+              37.7865
+            ],
+            [
+              -122.4015,
+              37.7865
+            ],
+            [
+              -122.4015,
+              37.777499999999996
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
