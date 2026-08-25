@@ -1,3 +1,5 @@
+import time
+start = time.time()
 import os
 import pandas as pd
 import json
@@ -101,3 +103,5 @@ def run_spatial_join(data_dir="data", output_dir="output"):
 
 if __name__ == "__main__":
     run_spatial_join()
+
+print(f"Execution Time: {time.time()-start:.2f} seconds")
