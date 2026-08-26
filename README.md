@@ -85,4 +85,14 @@ Each retail store is surrounded by a 500-meter
 buffer polygon. GPS pings inside this polygon
 are counted as visitors to that store.
 
+## Mid Project Review
+
+Completed
+
+- Synthetic GPS Generator
+- Store Catchments
+- dbt Models
+- Spatial Join
+- Dashboard Initial Setup
+
 ```
