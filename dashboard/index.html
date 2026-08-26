@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPulse - Hyper-Local Retail Mobility Analytics</title>
+    <!-- Leaflet CSS for maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navbar -->
+        <header class="navbar">
+            <div class="brand">
+                <div class="logo-icon">🌐</div>
+                <div>
+                    <h1>GeoPulse <span>v1.0</span></h1>
+                    <p class="subtitle">Hyper-Local Retail Mobility & Store Cannibalization Analytics</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="badge live-badge">● LIVE GEOSPATIAL FEED</div>
+                <button class="btn btn-primary" onclick="triggerSimulation()">🔄 Re-Run PySpark Join</button>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-content">
+            <!-- Sidebar Controls -->
+            <aside class="sidebar">
+                <div class="card shadow-sm">
+                    <h3>📍 Store Selection & Radius</h3>
+                    <div class="form-group">
+                        <label>Target Store</label>
+                        <select id="storeSelect" onchange="onStoreSelect()">
+                            <option value="ALL">All Stores Overview</option>
+                            <option value="STORE_001">Store A: Coffee Craft (5th Street)</option>
+                            <option value="STORE_002" selected>Store B: Coffee Craft (Market St - Candidate)</option>
+                            <option value="STORE_003">Store C: Financial District</option>
+                            <option value="STORE_004">Store D: Mission Hub</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Catchment Buffer (Meters)</label>
+                        <input type="range" id="bufferRadius" min="100" max="1000" step="50" value="500" oninput="updateBufferRadius(this.value)">
+                        <span id="radiusLabel">500m Radius</span>
+                    </div>
+                </div>
+
+                <!-- Cannibalization Alert Card -->
+                <div class="card alert-card warning-card">
+                    <div class="card-header">
+                        <span class="alert-icon">⚠️</span>
+                        <h4>Cannibalization Alert</h4>
+                    </div>
+                    <div class="metric-value text-danger" id="cannibalizationRate">32.4%</div>
+                    <p class="card-desc" id="cannibalizationText">Overlapping commuter traffic between <strong>Store A (5th St)</strong> and <strong>Store B (Market St)</strong>.</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 32.4%;"></div>
+                    </div>
+                    <div class="recommendation-badge badge-danger">RECOMMENDATION: CHOOSE DIFFERENT LOCATION</div>
+                </div>
+
+                <!-- Summary Statistics -->
+                <div class="card">
+                    <h3>📊 Key Footfall Metrics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">Total Device Pings</span>
+                            <span class="stat-value" id="totalPings">50,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Unique Commuters</span>
+                            <span class="stat-value" id="uniqueVisitors">5,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Peak Traffic Hour</span>
+                            <span class="stat-value text-accent">08:00 AM</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Spatial Precision</span>
+                            <span class="stat-value">Sub-5m GPS</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Map & Chart View -->
+            <main class="view-panel">
+                <!-- Map Container -->
+                <div class="map-wrapper card">
+                    <div class="map-controls-bar">
+                        <span class="map-title">🌍 3D Hexbin Footfall Heatmap (Kepler.gl Engine)</span>
+                        <div class="timeline-control">
+                            <span>🕒 Timeline Scrubber: <strong id="timeDisplay">08:00 AM (Morning Commute)</strong></span>
+                            <input type="range" id="timeSlider" min="6" max="23" value="8" oninput="onTimeSliderChange(this.value)">
+                        </div>
+                    </div>
+                    <div id="map" class="map-container"></div>
+                </div>
+
+                <!-- Analytics Charts -->
+                <div class="analytics-section">
+                    <div class="kpi-grid">
+                        <div class="card kpi-card">
+                            <span class="kpi-label">Selected Store</span>
+                            <span class="kpi-value" id="selectedStoreName">Store B</span>
+                            <span class="kpi-trend" id="selectedStoreContext">Live performance snapshot</span>
+                        </div>
+                        <div class="card kpi-card">
+                            <span class="kpi-label">Current Hour Visitors</span>
+                            <span class="kpi-value" id="currentHourTraffic">1,235</span>
+                            <span class="kpi-trend" id="currentHourTrend">At selected hour</span>
+                        </div>
+                        <div class="card kpi-card">
+                            <span class="kpi-label">Daily Visitors</span>
+                            <span class="kpi-value" id="dailyVisitors">14,890</span>
+                            <span class="kpi-trend" id="dailyTrend">Across the full day</span>
+                        </div>
+                        <div class="card kpi-card">
+                            <span class="kpi-label">Peak Hour / Overlap</span>
+                            <span class="kpi-value" id="peakHourMetric">08:00</span>
+                            <span class="kpi-trend" id="peakHourTrend">Peak traffic window</span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="card chart-card">
+                            <h3>📈 Hourly Visitor Trend</h3>
+                            <canvas id="storeTrendChart"></canvas>
+                        </div>
+                        <div class="card chart-card">
+                            <h3>🏪 Store Comparison</h3>
+                            <canvas id="storeComparisonChart"></canvas>
+                        </div>
+                        <div class="card chart-card">
+                            <h3>🔗 Overlap with Nearby Stores</h3>
+                            <canvas id="storeOverlapChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
