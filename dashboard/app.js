@@ -134,6 +134,7 @@ function renderStoresOnMap() {
         storeMarkers.push(marker);
     });
     
+
     console.log(`Rendered ${stores.length} store catchment areas.`);
 }
 
@@ -282,6 +283,7 @@ function onTimeSliderChange(val) {
     const formatted = `${displayHour.toString().padStart(2, '0')}:00 ${period}`;
     document.getElementById('timeDisplay').innerText = `${formatted} (${val >= 7 && val <= 9 ? 'Morning Commute' : val >= 17 && val <= 19 ? 'Evening Peak' : 'Off-Peak'})`;
     const h = parseInt(val);
+    console.log(`Timeline hour selected: ${h}`);
     currentHour = h;
     renderPingsForHour(h);
     initCharts(h, selectedStoreId);
