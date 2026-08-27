@@ -133,6 +133,8 @@ function renderStoresOnMap() {
         marker.on('click', () => { showStoreDetail(s.id); });
         storeMarkers.push(marker);
     });
+    
+    console.log(`Rendered ${stores.length} store catchment areas.`);
 }
 
 function showStoreDetail(storeId) {
