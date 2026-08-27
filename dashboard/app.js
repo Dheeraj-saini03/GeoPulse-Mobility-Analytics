@@ -106,6 +106,7 @@ function initEmptyMap() {
         subdomains: 'abcd',
         maxZoom: 19
     }).addTo(map);
+    console.log("Leaflet map initialized");
 }
 
 function renderStoresOnMap() {
