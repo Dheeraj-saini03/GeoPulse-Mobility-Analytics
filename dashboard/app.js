@@ -336,8 +336,12 @@ function initCharts(selectedHour, selectedStore) {
     });
 
     console.log(`Rendering hourly visitor trend for ${filteredStoreIds.length} store(s).`);
-    if (trendChart) trendChart.destroy();
-    trendChart = new Chart(trendCtx, {
+
+const trendCtx = document.getElementById('storeTrendChart').getContext('2d');
+
+if (trendChart) trendChart.destroy();
+
+trendChart = new Chart(trendCtx, {
         type: 'line',
         data: { labels, datasets: trendDatasets },
         options: {
