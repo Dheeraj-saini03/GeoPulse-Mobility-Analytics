@@ -335,7 +335,7 @@ function initCharts(selectedHour, selectedStore) {
         ds.pointBackgroundColor = hours.map(h => (h === hourToHighlight ? '#ffffff' : ds.borderColor));
     });
 
-    const trendCtx = document.getElementById('storeTrendChart').getContext('2d');
+    console.log(`Rendering hourly visitor trend for ${filteredStoreIds.length} store(s).`);
     if (trendChart) trendChart.destroy();
     trendChart = new Chart(trendCtx, {
         type: 'line',
