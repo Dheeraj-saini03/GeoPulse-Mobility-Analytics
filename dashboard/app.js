@@ -361,6 +361,7 @@ trendChart = new Chart(trendCtx, {
         return row ? row.unique_visitors || row.total_pings || 0 : 0;
     });
     const comparisonColors = availableStoreIds.map(id => id === selectedStore ? '#06b6d4' : '#6366f1');
+    console.log(`Rendering store comparison for ${comparisonLabels.length} store(s).`);
     const comparisonCtx = document.getElementById('storeComparisonChart').getContext('2d');
     if (comparisonChart) comparisonChart.destroy();
     comparisonChart = new Chart(comparisonCtx, {
