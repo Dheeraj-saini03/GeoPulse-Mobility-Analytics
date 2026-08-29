@@ -344,5 +344,7 @@ select, input[type="range"] {
 
 .chart-card canvas {
     flex: 1;
+    width: 100%;
+    max-width: 100%;
     max-height: 150px;
 }
