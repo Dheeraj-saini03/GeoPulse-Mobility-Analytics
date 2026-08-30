@@ -24,19 +24,24 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     return R * c
 
 def run_spatial_join(data_dir="data", output_dir="output"):
-    os.makedirs(output_dir, exist_ok=True)
-    print("Executing PySpark / Spatial Processing Pipeline for GeoPulse...")
+    try:
+        os.makedirs(output_dir, exist_ok=True)
+        print("Executing PySpark / Spatial Processing Pipeline for GeoPulse...")
 
-    pings_path = os.path.join(data_dir, "raw_mobile_pings.csv")
-    stores_path = os.path.join(data_dir, "stores.csv")
+        pings_path = os.path.join(data_dir, "raw_mobile_pings.csv")
+        stores_path = os.path.join(data_dir, "stores.csv")
 
-    if not os.path.exists(pings_path) or not os.path.exists(stores_path):
-        print("Error: Input data missing. Running data generator first...")
-        from data_generator import generate_geopulse_data
-        generate_geopulse_data(output_dir=data_dir)
+        if not os.path.exists(pings_path) or not os.path.exists(stores_path):
+            print("Error: Input data missing. Running data generator first...")
+            from data_generator import generate_geopulse_data
+            generate_geopulse_data(output_dir=data_dir)
 
-    pings_df = pd.read_csv(pings_path)
-    stores_df = pd.read_csv(stores_path)
+        pings_df = pd.read_csv(pings_path)
+        stores_df = pd.read_csv(stores_path)
+
+    except Exception as e:
+        print(f"Spatial processing failed: {e}")
+        raise
 
     # Convert timestamp to datetime
     pings_df['timestamp'] = pd.to_datetime(pings_df['timestamp'])
