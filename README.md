@@ -95,4 +95,11 @@ Completed
 - Spatial Join
 - Dashboard Initial Setup
 
+## Dashboard Setup & Launch
+
+The GeoPulse dashboard can be launched from the project root using:
+
+```text
+python -m http.server 8000
+
 ```
