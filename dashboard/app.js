@@ -298,6 +298,7 @@ function updateBufferRadius(val) {
 
 function onStoreSelect() {
     const selected = document.getElementById('storeSelect').value;
+    console.log(`Store selected: ${selected}`);
     if (selected === 'ALL') {
         showAllStores();
     } else {
