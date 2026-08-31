@@ -102,4 +102,19 @@ The GeoPulse dashboard can be launched from the project root using:
 ```text
 python -m http.server 8000
 
+## Business ROI & Store Recommendation
+
+GeoPulse supports retail location decisions by combining:
+
+- Store footfall
+- Unique visitor counts
+- Hourly traffic patterns
+- Store catchment areas
+- Visitor overlap
+- Cannibalization risk
+
+High visitor overlap can indicate potential customer cannibalization.
+
+A candidate location should therefore be evaluated using visitor demand, overlap with existing stores, location cost and expected incremental customer acquisition.
+
 ```
