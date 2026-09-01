@@ -95,7 +95,10 @@ body {
     border: none;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    .btn:hover {
+    transform: translateY(-1px);
+}
 }
 
 .btn-primary {
