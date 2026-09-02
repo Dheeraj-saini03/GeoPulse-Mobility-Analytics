@@ -133,6 +133,16 @@ The GeoPulse project was validated for:
 - Analytical charts
 - Error handling
 
+## GeoPulse v1.0 Release Completed
 
+**Version:** v1.0
+
+**Status:** Release Completed
+
+**Final Review:** Ready
+
+The GeoPulse project combines geospatial mobility processing,
+footfall analytics, store overlap analysis and an interactive
+dashboard to support retail location decision-making.
 
 ```
